@@ -1,0 +1,26 @@
+{
+  "name": "vite2-vue3-ssr",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server-env.js",
+    "build:client": "vite build --outDir dist/client --ssrManifest",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
+    "build": "yarn build:client && yarn build:server",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "vue": "^3.1.5",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2",
+    "vuex-router-sync": "^6.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/server-renderer": "^3.1.5",
+    "express": "^4.17.1",
+    "sass": "^1.36.0",
+    "vite": "^2.4.3"
+  }
+}
